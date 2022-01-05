@@ -1,5 +1,6 @@
 const Karix = require(__dirname + '/karix');
 
+//Send Text Messages:
 Karix.sendTextMessage(
     {
         "preview_url":false,
@@ -8,27 +9,32 @@ Karix.sendTextMessage(
     },
     "918757014613"
 );
-// Karix.sendAutoTemplateMessage(
-//     {
-//         "preview_url": false,
-//         "type": "AUTO_TEMPLATE",
-//         "text": "Hi Shubho! Thanks for starting your personal training plan. We’ll send you a weekly update with your new schedule. You can log-in online using your training ID 123456. Stay fit !"
-//     },
-//     "918757014613"
-// );
-// Karix.sendTemplate(
-//     {
-//         "preview_url": false,
-//         "type": "TEMPLATE",
-//         "template":{
-//             "templateId": "first_order_review",
-//             "parameterValues": {
-//                 "0": "Shubho"
-//             }
-//         }
-//     },
-//     "918757014613"
-// );
+
+//Send Auto-Template Messages:
+Karix.sendAutoTemplateMessage(
+    {
+        "preview_url": false,
+        "type": "AUTO_TEMPLATE",
+        "text": "Hi Shubho! Thanks for starting your personal training plan. We’ll send you a weekly update with your new schedule. You can log-in online using your training ID 123456. Stay fit !"
+    },
+    "918757014613"
+);
+
+//Send Template Messages:
+Karix.sendTemplate(
+    {
+        "preview_url": false,
+        "type": "TEMPLATE",
+        "template":{
+            "templateId": "first_order_review",
+            "parameterValues": {
+                "0": "Shubho"
+            }
+        }
+    },
+    "918757014613"
+);
+
 // Karix.sendMediaTemplate(
 //     {
 //         "preview_url": false,
