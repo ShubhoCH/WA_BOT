@@ -1,4 +1,5 @@
 const Karix = require(__dirname + '/karix');
+require('dotenv').config()
 
 //Send Text Messages:
 Karix.send(
@@ -7,7 +8,7 @@ Karix.send(
         "type":"TEXT",
         "text":"Hey, Shubho!"
     },
-    "918757014613"
+    process.env.RECEIVER_PHNO
 );
 
 // //Send Auto-Template Messages:
@@ -17,7 +18,7 @@ Karix.send(
 //         "type": "AUTO_TEMPLATE",
 //         "text": "Hi Shubho! Thanks for starting your personal training plan. We’ll send you a weekly update with your new schedule. You can log-in online using your training ID 123456. Stay fit !"
 //     },
-//     "918757014613"
+//     process.env.RECEIVER_PHNO
 // );
 
 // //Send Template Messages:
@@ -32,7 +33,7 @@ Karix.send(
 //             }
 //         }
 //     },
-//     "918757014613"
+//     process.env.RECEIVER_PHNO
 // );
 
 // // Media:
@@ -51,7 +52,7 @@ Karix.send(
 //             }
 //         }            
 //     },
-//     "918757014613"
+//     process.env.RECEIVER_PHNO
 // );
 // Karix.send(
 //     {
@@ -68,5 +69,5 @@ Karix.send(
 //             }
 //         }            
 //     },
-//     "918757014613"
+//     process.env.RECEIVER_PHNO
 // );
