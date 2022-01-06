@@ -20,7 +20,7 @@ const config = {
     }
 }
 
-exports.sendTextMessage = async function(req, phno) {
+exports.send = async function(req, phno) {
   try {
     return rp({
       uri: 'https://rcmapi.instaalerts.zone/services/rcm/sendMessage',
@@ -30,108 +30,6 @@ exports.sendTextMessage = async function(req, phno) {
         message: {
           channel: config.channel,
           content: req,
-          recipient:{
-              "to":phno,
-              "recipient_type": config.recipient_type,
-              "reference":{
-                  "cust_ref": phno,
-                  "messageTag1": config.messageTag,
-                  "conversationId": phno
-              }
-          },
-          sender: config.sender,
-          preferences: config.preferences,
-        },
-        metaData: {
-          version: 'v1.0.9',
-        },
-      },
-      json: true,
-    });
-  } catch (error) {
-    console.log(error);
-    return {};
-  }
-};
-
-exports.sendAutoTemplateMessage = async function (content, phno) {
-  try {
-    return rp({
-      uri: 'https://rcmapi.instaalerts.zone/services/rcm/sendMessage',
-      method: config.method,
-      headers: config.headers,
-      body: {
-        message: {
-          channel: config.channel,
-          content: content,
-          recipient:{
-              "to":phno,
-              "recipient_type": config.recipient_type,
-              "reference":{
-                  "cust_ref": phno,
-                  "messageTag1": config.messageTag,
-                  "conversationId": phno
-              }
-          },
-          sender: config.sender,
-          preferences: config.preferences,
-        },
-        metaData: {
-          version: 'v1.0.9',
-        },
-      },
-      json: true,
-    });
-  } catch (error) {
-    console.log(error);
-    return {};
-  }
-};
-
-exports.sendTemplate = async function(content, phno){
-  try {
-    return rp({
-      uri: 'https://rcmapi.instaalerts.zone/services/rcm/sendMessage',
-      method: config.method,
-      headers: config.headers,
-      body: {
-        message: {
-          channel: config.channel,
-          content: content,
-          recipient:{
-              "to":phno,
-              "recipient_type": config.recipient_type,
-              "reference":{
-                  "cust_ref": phno,
-                  "messageTag1": config.messageTag,
-                  "conversationId": phno
-              }
-          },
-          sender: config.sender,
-          preferences: config.preferences,
-        },
-        metaData: {
-          version: 'v1.0.9',
-        },
-      },
-      json: true,
-    });
-  } catch (error) {
-    console.log(error);
-    return {};
-  }
-};
-
-exports.sendMediaTemplate = async function(content, phno){
-  try {
-    return rp({
-      uri: 'https://rcmapi.instaalerts.zone/services/rcm/sendMessage',
-      method: config.method,
-      headers: config.headers,
-      body: {
-        message: {
-          channel: config.channel,
-          content: content,
           recipient:{
               "to":phno,
               "recipient_type": config.recipient_type,

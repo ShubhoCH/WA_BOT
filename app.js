@@ -1,7 +1,7 @@
 const Karix = require(__dirname + '/karix');
 
 //Send Text Messages:
-Karix.sendTextMessage(
+Karix.send(
     {
         "preview_url":false,
         "type":"TEXT",
@@ -11,7 +11,7 @@ Karix.sendTextMessage(
 );
 
 //Send Auto-Template Messages:
-Karix.sendAutoTemplateMessage(
+Karix.send(
     {
         "preview_url": false,
         "type": "AUTO_TEMPLATE",
@@ -21,7 +21,7 @@ Karix.sendAutoTemplateMessage(
 );
 
 //Send Template Messages:
-Karix.sendTemplate(
+Karix.send(
     {
         "preview_url": false,
         "type": "TEMPLATE",
@@ -35,7 +35,7 @@ Karix.sendTemplate(
     "918757014613"
 );
 
-// Karix.sendMediaTemplate(
+// Karix.send(
 //     {
 //         "preview_url": false,
 //         "type": "MEDIA_TEMPLATE",
@@ -52,7 +52,7 @@ Karix.sendTemplate(
 //     },
 //     "918757014613"
 // );
-// Karix.sendVideo(
+// Karix.send(
 //     {
 //         "preview_url": false,
 //         "type": "MEDIA_TEMPLATE",
