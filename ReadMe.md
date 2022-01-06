@@ -16,3 +16,12 @@ In the app.js File call the function with the requred payload_content and Receiv
 ```bash
 Karix.send(<payload_content>, <phno>)
 ```
+## Note:
+Make sure you create your own .env file and all the required Credentials:
+```bash
+URI=<Your_URI>
+KARIX_ACCOUNT_TOKEN=<Your_Token>
+SENDER_PHNO=<Sender_Phno>
+WEB_HOOK_ID=<Tour_WebHookID>
+CHANNEL=<Your_Channel>
+```
