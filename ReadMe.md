@@ -12,8 +12,7 @@ npm i
 
 ## How to Use:
  
-In the app.js File call the 
+In the app.js File call the function with the requred payload_content and Receiver's Phno.
 ```bash
 Karix.send(<payload_content>, <phno>)
 ```
-function with the requred payload template and Receiver's Phno.
